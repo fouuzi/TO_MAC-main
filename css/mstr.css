@@ -1,0 +1,298 @@
+/* GLOBAL RULES */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* START Variable */
+:root {
+  --main-color: #a3b8b4;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+}
+/* END Variables */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  background-color: #fdfcfc;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small 
+/* END GLOBAL RULES */
+
+/* START HEADER */
+.header {
+  overflow: hidden;
+  background-color: white;
+  opacity: 0.7;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: nowrap;
+  height: 90px;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  color: #424746;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: futura-lt-w01-light;
+  height: 72px;
+  transition: var(--main-transition);
+}
+.header .logo:hover {
+  color: var(--main-color);
+}
+
+.header .main-nav {
+  display: flex;
+  position: relative;
+}
+
+.header .main-nav > li > a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: futura-lt-w01-light;
+  line-height: 25px;
+  border-radius: 4px;
+  transition: var(--main-transition);
+}
+
+.header .main-nav li a:hover {
+  color: var(--main-color);
+}
+
+/* End Header */
+
+/* START LANDING */
+
+.landing {
+  width: 100%;
+}
+
+.landing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  margin: 0;
+  padding: 0;
+}
+
+.landing .container .tacos-pic {
+}
+
+.landing .tacos-pic img {
+  width: 700px;
+  height: 822px;
+  animation-duration: 4s;
+  animation-name: aGauche;
+}
+
+.landing .tacos-pic img:hover {
+  /* transform: translate(740px, 0%); */
+}
+
+.landing .tacos-desc {
+  margin-top: 100px;
+}
+
+.landing .tacos-desc .title {
+  font-family: futura-lt-w01-light;
+  color: #894b2b;
+  width: fit-content;
+  margin: 10px auto;
+  border-bottom: 1px solid #e9ecf3;
+  font-size: 40px;
+}
+
+.landing .tacos-desc .ingredients {
+}
+
+#ingre {
+  color: var(--main-color);
+}
+
+#ingTitle {
+  font-family: cursive;
+}
+
+.landing .integreContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* .landing .integreContainer .ingredientsOne:hover {
+  margin-left: ;
+}
+
+.landing .integreContainer .ingredientsTwo:hover {
+} */
+
+.landing .ingredientsOne {
+  padding: 16px;
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0px 7px 0px #894b2b;
+  width: fit-content;
+  transition: var(--main-transition);
+  background-color: white;
+  position: relative;
+}
+
+.landing .ingredientsOne:hover {
+  transform: translateY(-10px);
+  background-color: #894b2b;
+}
+
+.landing .ingredientsOne .ingred_Title {
+  display: flex;
+  border-bottom: 1px solid #e9ecf3;
+}
+
+.landing .ingredientsOne .ingred_Title img {
+  width: 35px;
+  padding: 5px;
+}
+
+.landing .ingredientsOne li a {
+  font-family: fantasy;
+  font-size: 16px;
+  line-height: 35px;
+  color: black;
+  padding-left: 5px;
+}
+.landing .ingredientsOne .chekLI {
+  margin-top: 10px;
+}
+
+.landing .ingredientsOne .chekLI li {
+  display: flex;
+}
+
+.landing .ingredientsOne .chekLI img {
+  width: 30px;
+}
+
+.landing .ingredientsTwo {
+  padding: 16px;
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0px 7px 0px #894b2b;
+  width: fit-content;
+  transition: var(--main-transition);
+  background-color: white;
+}
+
+.landing .ingredientsTwo:hover {
+  transform: translateY(-10px);
+  background-color: #894b2b;
+}
+
+.landing .ingredientsTwo li a {
+  font-family: unset;
+  font-size: 16px;
+  line-height: 35px;
+  color: black;
+  padding-left: 5px;
+  border-bottom: 1px solid black;
+}
+
+.landing .ingredientsTwo .chekLI {
+  margin-top: 10px;
+}
+
+.landing .ingredientsTwo .ingred_Title {
+  display: flex;
+  /* width: fit-content; */
+  border-bottom: 1px solid #e9ecf3;
+}
+
+.landing .ingredientsTwo .ingred_Title img {
+  width: 35px;
+  padding: 5px;
+}
+
+.landing .ingredientsTwo .chekLI li {
+  display: flex;
+  padding: 5px 0;
+}
+.landing .ingredientsTwo .chekLI li span {
+  font-weight: 700;
+  font-family: "Work Sans";
+}
+
+.landing .ingredientsTwo .chekLI li span img {
+  width: 40px;
+}
+
+.landing .ingredientsTwo .chekLI img {
+  width: 30px;
+}
+
+.integreContainer .method {
+}
+
+.method .Oounwan {
+  font-family: futura-lt-w01-light;
+  color: #894b2b;
+  width: fit-content;
+  margin: 20px auto 0;
+  border-bottom: 1px solid #e9ecf3;
+  font-size: 20px;
+}
+
+.method .container {
+}
+
+.method .container .box {
+  width: fit-content;
+}
+
+.method .container .box ol li {
+  padding: 4px;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.method .container .box ol li a {
+  color: black;
+}
+
+.method .container .box li::marker {
+  color: #894b2b;
+  font-weight: 700;
+}
